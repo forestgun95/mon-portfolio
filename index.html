@@ -588,6 +588,12 @@
       position: relative;
       overflow: hidden;
     }
+    .project-img img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
     .project-img::before {
       content: '';
       position: absolute;
@@ -909,13 +915,17 @@
       <h2 class="section-title">Mes Projets Phares</h2>
       <div class="project-grid">
         <div class="project">
-            <div class="project-img"><img src="https://infxpert.fr/wp-content/uploads/2024/12/INFXPERT-Bleu.png" alt="Logo INFXPERT" style="width: 100%; height: 100%; object-fit: contain;"></div>          <div class="project-body">
+          <div class="project-img" style="background: #ffffff; padding: 20px;">
+            <img src="https://infxpert.fr/wp-content/uploads/2024/12/INFXPERT-Bleu.png" alt="Logo INFXPERT" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'font-size: 2.5rem; font-weight: 700; color: #2563eb; letter-spacing: 0.05em;\'>INFXPERT</div>';" style="width: auto; height: auto; max-width: 100%; max-height: 130px; object-fit: contain;">
+          </div>
+          <div class="project-body">
             <h3>INFXPERT - Service de dépannage informatique</h3>
-                            <p class="muted">Projet entrepreneurial de création d'un service de dépannage informatique à domicile en Île-de-France. Développement d'un site web professionnel, mise en place de procédures d'intervention et gestion de la relation client.</p>            <div class="tag-row">
+            <p class="muted">Projet entrepreneurial de création d'un service de dépannage informatique à domicile en Île-de-France. Développement d'un site web professionnel, mise en place de procédures d'intervention et gestion de la relation client.</p>
+            <div class="tag-row">
               <span class="tag">Site Web</span>
-            <div class="project-img" style="background: #fff; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; color: #2563eb; letter-spacing: 0.05em;">INFXPERT</div>              <span class="tag">Entrepreneuriat</span>
+              <span class="tag">Entrepreneuriat</span>
             </div>
-                                        <a href="https://infxpert.fr/" target="_blank" class="pill" style="margin-top: 12px;">Voir le site →</a>
+            <a href="https://infxpert.fr/" target="_blank" class="pill" style="margin-top: 12px; display: inline-block;">Voir le site →</a>
           </div>
         </div>
       </div>
