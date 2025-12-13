@@ -690,7 +690,30 @@
       nav { display: none; }
       .about { grid-template-columns: 1fr; }
       .photo-card { height: 260px; }
+  
+        /* Réalisations E5 */
+    .realisations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
     }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      background: var(--card-strong);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 0.85rem;
+      border: 1px solid var(--border);
+    }}
   </style>
 </head>
 <body>
@@ -704,6 +727,7 @@
           <li><a href="#skills">Compétences</a></li>
           <li><a href="#school">Parcours scolaire</a></li>
           <li><a href="#projects">Projets</a></li>
+                      <li><a href="#realisations">Réalisations E5</a></li>
           <li><a href="#techwatch">Veille</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -739,6 +763,58 @@
             <div><strong>Objectif :</strong> Administrateur systèmes et réseaux polyvalent</div>
           </div>
         </div>
+      </div>
+    </section>
+
+        <!-- Section Réalisations E5 -->
+    <section class="section" id="realisations">
+      <h2 class="section-title">Réalisations Professionnelles E5</h2>
+      <div class="realisations-grid">
+        
+        <!-- Réalisation 1 -->
+        <div class="card">
+          <h3>Installation poste de travail client</h3>
+          <p class="muted">Février 2025 | Boutique informatique</p>
+          <p>Préparation complète d'un poste de travail pour un client particulier : installation de Windows 11, configuration des pilotes, installation de la suite bureautique et de l'antivirus, tests de bon fonctionnement.</p>
+          <div class="tags">
+            <span class="tag">Gérer le patrimoine informatique</span>
+            <span class="tag">Mettre à disposition un service</span>
+          </div>
+        </div>
+
+        <!-- Réalisation 2 -->
+        <div class="card">
+          <h3>Intégration postes réseau entreprise</h3>
+          <p class="muted">Mars à Juin 2025 | Boutique informatique</p>
+          <p>Intégration de postes de travail dans un environnement réseau d'entreprise : configuration réseau, jonction au domaine, déploiement de stratégies de groupe, tests de connectivité et documentation.</p>
+          <div class="tags">
+            <span class="tag">Gérer le patrimoine informatique</span>
+            <span class="tag">Travailler en mode projet</span>
+          </div>
+        </div>
+
+        <!-- Réalisation 3 -->
+        <div class="card">
+          <h3>Dépannage réseau et connexion Internet</h3>
+          <p class="muted">Janvier 2025 | Boutique informatique</p>
+          <p>Diagnostic et résolution de problèmes de connexion Internet chez un client : vérification box/routeur, configuration réseau, test de câblage, résolution du problème et documentation de l'intervention.</p>
+          <div class="tags">
+            <span class="tag">Répondre aux incidents</span>
+            <span class="tag">Support utilisateur</span>
+          </div>
+        </div>
+
+        <!-- Réalisation 4 -->
+        <div class="card">
+          <h3>Sauvegarde et récupération de données</h3>
+          <p class="muted">Mars 2025 | Boutique informatique</p>
+          <p>Récupération de données sur un disque dur défaillant, sauvegarde complète, transfert sur nouveau support et vérification de l'intégrité des données récupérées.</p>
+          <div class="tags">
+            <span class="tag">Gérer le patrimoine informatique</span>
+            <span class="tag">Répondre aux incidents</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
