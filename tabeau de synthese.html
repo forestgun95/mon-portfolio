@@ -7,227 +7,282 @@
 <title>Tableau de Synthèse BTS SIO - Angel Cherino</title>
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0e1220 0%, #1a1f35 100%);
-    color: #e8e8f7;
-    line-height: 1.6;
-    min-height: 100vh;
-    padding: 20px;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0e1220 0%, #1a1f35 100%);
+  color: #e8e8f7;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 30px 20px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    background: linear-gradient(135deg, #6ca8ff 0%, #8c67ff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #6ca8ff 0%, #8c67ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 header p {
-    font-size: 1.2em;
-    color: #a0a8c0;
+  font-size: 1.2em;
+  color: #a0a8c0;
+  margin: 10px 0;
 }
 
 .table-wrapper {
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    overflow-x: auto;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-x: auto;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 thead {
-    background: linear-gradient(135deg, #1e2749 0%, #2d3a5f 100%);
+  background: linear-gradient(135deg, #1e2749 0%, #2d3a5f 100%);
 }
 
 thead th {
-    padding: 15px;
-    text-align: left;
-    font-weight: 600;
-    color: #ffffff;
-    border-bottom: 2px solid #6ca8ff;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 2px solid #6ca8ff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-size: 0.9em;
 }
 
 tbody tr {
-    transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 tbody tr:hover {
-    background: rgba(108, 168, 255, 0.1);
-    transform: scale(1.01);
+  background: rgba(108, 168, 255, 0.1);
+  transform: scale(1.01);
 }
 
 tbody td {
-    padding: 15px;
-    color: #d4d8e8;
+  padding: 15px;
+  color: #d4d8e8;
 }
 
-.competence {
-    font-weight: 600;
-    color: #6ca8ff;
+.realisation {
+  font-weight: 600;
+  color: #6ca8ff;
 }
 
-.activite {
-    color: #8c67ff;
-    font-weight: 500;
+.periode {
+  color: #8c67ff;
+  font-weight: 500;
+}
+
+.section-title {
+  background: rgba(108, 168, 255, 0.2);
+  font-weight: 700;
+  color: #6ca8ff;
+  text-align: center;
+  padding: 15px;
 }
 
 .button-container {
-    text-align: center;
-    margin-top: 30px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .btn-retour {
-    display: inline-block;
-    padding: 12px 30px;
-    background: linear-gradient(135deg, #6ca8ff 0%, #8c67ff 100%);
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(108, 168, 255, 0.3);
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #6ca8ff 0%, #8c67ff 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(108, 168, 255, 0.3);
 }
 
 .btn-retour:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(108, 168, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 168, 255, 0.5);
 }
 
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-    
-    .table-wrapper {
-        padding: 15px;
-    }
-    
-    thead th,
-    tbody td {
-        padding: 10px;
-        font-size: 0.9em;
-    }
+  header h1 {
+    font-size: 2em;
+  }
+  
+  .table-wrapper {
+    padding: 15px;
+  }
+  
+  thead th,
+  tbody td {
+    padding: 10px;
+    font-size: 0.9em;
+  }
 }
 </style>
 </head>
 <body>
 <div class="container">
-    <header>
-        <h1>Tableau de Synthèse</h1>
-        <p>BTS SIO SISR - Épreuve E5 - 2025</p>
-        <p><strong>Angel Cherino</strong></p>
-    </header>
+  <header>
+    <h1>BTS SERVICES INFORMATIQUES AUX ORGANISATIONS</h1>
+    <p><strong>Tableau de synthèse des réalisations professionnelles</strong></p>
+    <p>NOM et prénom : <strong>Cherino Angel</strong></p>
+    <p>Centre de formation : <strong>Ecole IRIS, Paris 75017</strong></p>
+    <p>Option : <strong>SISR</strong></p>
+    <p>Adresse URL du portfolio : <strong>https://forestgun95.github.io/mon-portfolio/</strong></p>
+  </header>
 
-    <div class="table-wrapper">
-        <table>
-            <thead>
-                <tr>
-                    <th>Compétence</th>
-                    <th>Activité</th>
-                    <th>Description</th>
-                    <th>Contexte</th>
-                    <th>Durée</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="competence">B1.1</td>
-                    <td class="activite">Support technique aux utilisateurs</td>
-                    <td>Assistance et résolution de problèmes techniques</td>
-                    <td>Entreprise MediaSchool</td>
-                    <td>3 mois</td>
-                </tr>
-                <tr>
-                    <td class="competence">B1.2</td>
-                    <td class="activite">Maintenance du poste de travail</td>
-                    <td>Maintenance préventive et curative des postes</td>
-                    <td>Entreprise MediaSchool</td>
-                    <td>2 mois</td>
-                </tr>
-                <tr>
-                    <td class="competence">B1.3</td>
-                    <td class="activite">Gestion des incidents</td>
-                    <td>Traitement et suivi des tickets d'incident</td>
-                    <td>Entreprise MediaSchool</td>
-                    <td>4 mois</td>
-                </tr>
-                <tr>
-                    <td class="competence">B2.1</td>
-                    <td class="activite">Administration des systèmes</td>
-                    <td>Gestion et configuration de serveurs Windows/Linux</td>
-                    <td>Infrastructure réseau</td>
-                    <td>5 mois</td>
-                </tr>
-                <tr>
-                    <td class="competence">B2.2</td>
-                    <td class="activite">Gestion des réseaux</td>
-                    <td>Configuration et maintenance du réseau d'entreprise</td>
-                    <td>Infrastructure réseau</td>
-                    <td>4 mois</td>
-                </tr>
-                <tr>
-                    <td class="competence">B2.3</td>
-                    <td class="activite">Sécurité des systèmes</td>
-                    <td>Mise en place de politiques de sécurité</td>
-                    <td>Sécurité informatique</td>
-                    <td>3 mois</td>
-                </tr>
-                <tr>
-                    <td class="competence">B3.1</td>
-                    <td class="activite">Supervision des services</td>
-                    <td>Monitoring et surveillance des services IT</td>
-                    <td>Centre de supervision</td>
-                    <td>3 mois</td>
-                </tr>
-                <tr>
-                    <td class="competence">B3.2</td>
-                    <td class="activite">Sauvegarde et restauration</td>
-                    <td>Gestion des sauvegardes et procédures de restauration</td>
-                    <td>Gestion des données</td>
-                    <td>2 mois</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Réalisations professionnelles</th>
+          <th>Période</th>
+          <th>Gérer le patrimoine informatique</th>
+          <th>Répondre aux incidents et aux demandes d'assistance</th>
+          <th>Développer la présence en ligne de l'organisation</th>
+          <th>Travailler en mode projet</th>
+          <th>Mettre à disposition des utilisateurs un service informatique</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="section-title">
+          <td colspan="7">Réalisations en milieu professionnel (sous la forme du JJMMAA au JJMMAA)</td>
+        </tr>
+        <tr>
+          <td class="realisation">Installation et configuration d'un poste de travail client</td>
+          <td class="periode">10/02/2025 au 14/02/2025</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+        </tr>
+        <tr>
+          <td class="realisation">Intégration de postes de travail au réseau d'entreprise</td>
+          <td class="periode">Février 2025 à Décembre 2025</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+        </tr>
+        <tr>
+          <td class="realisation">Configuration de PC sur mesure pour clients professionnels</td>
+          <td class="periode">avr-25</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+        </tr>
+        <tr>
+          <td class="realisation">Maintenance préventive entreprises</td>
+          <td class="periode">Mai 2025 - Nov 2025</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+        </tr>
+        <tr>
+          <td class="realisation">Dépannage PC particuliers</td>
+          <td class="periode">Fév 2025 - Déc 2025</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+        </tr>
+        <tr class="section-title">
+          <td colspan="7">Réalisations en milieu professionnel en cours de première année</td>
+        </tr>
+        <tr>
+          <td class="realisation">Installation poste de travail client</td>
+          <td class="periode">févr-25</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+        </tr>
+        <tr>
+          <td class="realisation">Intégration postes réseau entreprise</td>
+          <td class="periode">Mars à Juin 2025</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+        </tr>
+        <tr>
+          <td class="realisation">Dépannage réseau et connexion Internet client</td>
+          <td class="periode">mars-25</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+        </tr>
+        <tr>
+          <td class="realisation">Sauvegarde et récupération de données disque défaillant</td>
+          <td class="periode">avr-25</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+        </tr>
+        <tr>
+          <td class="realisation">Nettoyage système et désinfection antivirus</td>
+          <td class="periode">avr-25</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center">X</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-    <div class="button-container">
-        <a href="index.html" class="btn-retour">← Retour au Portfolio</a>
-    </div>
+  <div class="button-container">
+    <a href="index.html" class="btn-retour">← Retour au Portfolio</a>
+  </div>
 </div>
 </body>
 </html>
