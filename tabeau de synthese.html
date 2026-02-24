@@ -2,13 +2,58 @@
 <html lang="fr-fr" dir="ltr">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="refresh" content="0; url=tableau-synthese-e5.csv">
     <title>Tableau de Synthèse BTS SIO - Angel Cherino</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0e1220 0%, #1a1f35 100%);
+            color: #e8e8f7;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        iframe {
+            width: 100%;
+            height: 90vh;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            background: white;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #6ca8ff;
+        }
+        .download-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            color: #6ca8ff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        .download-link:hover {
+            color: #8c67ff;
+        }
+    </style>
 </head>
 <body>
-    <p>Redirection vers le fichier CSV...</p>
-    <p><a href="tableau-synthese-e5.csv" download>Télécharger le tableau de synthèse E5</a></p>
+    <div class="container">
+        <h1>Tableau de Synthèse BTS SIO - Angel Cherino</h1>
+        <a href="tableau-synthese-e5.csv" download class="download-link">📥 Télécharger le fichier CSV</a>
+        <iframe src="tableau-synthese-e5.csv" title="Tableau de synthèse E5"></iframe>
+    </div>
 </body>
 </html>
