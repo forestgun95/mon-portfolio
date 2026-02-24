@@ -2,10 +2,201 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=index.html#about">
-    <title>Redirection...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Angel Cherino | BTS SISR</title>
+    <style>
+:root {
+  --bg: #0e1220;
+  --bg-2: #111827;
+  --card: #121727;
+  --card-strong: #0c101d;
+  --accent: #6ca8ff;
+  --accent-2: #6ca8ff;
+  --text: #e8edf7;
+  --muted: #9ca5b8;
+  --border: #1f2535;
+  --shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(12, 16, 29, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  background: #4dabff;
+  border-radius: 50%;
+}
+nav { flex: 1; display: flex; justify-content: center; }
+nav ul { display: flex; list-style: none; gap: 18px; margin: 0; padding: 0; }
+nav a {
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--muted);
+  transition: all 0.3s ease;
+}
+nav a:hover {
+  background: var(--border);
+  color: var(--text);
+  transform: translateY(-2px);
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 22px 100px;
+}
+h1 { font-size: clamp(34px, 4vw, 48px); margin: 0 0 10px; }
+h2 { margin: 0 0 16px; font-size: 28px; }
+h3 { margin: 0 0 8px; }
+.muted { color: var(--muted); }
+.section { margin-top: 60px; }
+.about {
+  display: grid;
+  grid-template-columns: 1.2fr 1.4fr;
+  gap: 28px;
+  align-items: center;
+  margin-top: 40px;
+}
+.photo-card {
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+.photo-card:hover img {
+  transform: translateY(-10px);
+}
+.about-details {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--muted);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.pill:hover {
+  transform: scale(1.05) translateY(-2px);
+  border-color: var(--accent);
+  background: rgba(108, 168, 255, 0.1);
+}
+footer {
+  margin-top: 80px;
+  padding: 24px 0;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+@media (max-width: 980px) {
+  nav { display: none; }
+  .about { grid-template-columns: 1fr; }
+  .photo-card { height: 260px; }
+}
+    </style>
 </head>
 <body>
-    <p>Redirection vers la section À propos...</p>
+<header>
+    <div class="nav">
+        <div class="brand">
+            <span class="brand-dot"></span> Angel Cherino
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="parcours.html">Parcours scolaire</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="realisations.html">Réalisations E5</a></li>
+                <li><a href="veille.html">Veille</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="wrapper">
+    <div class="section">
+        <h2>Qui suis-je ?</h2>
+        <div class="about">
+            <div class="photo-card">
+                <img src="portefolio angel cherino/angel cherino (5) copie.jpg" alt="Angel Cherino - Photo de profil">
+            </div>
+            <div class="about-details">
+                <p class="muted">Actuellement en deuxième année de BTS SIO option SISR, je me spécialise dans la gestion et la sécurisation des infrastructures. Curieux et méthodique, j'aime résoudre des problèmes complexes et apprendre en continu pour rester à jour sur les dernières technologies.</p>
+                <div class="info-grid">
+                    <div>
+                        <strong>Âge :</strong> <span class="muted">20 ans</span>
+                    </div>
+                    <div>
+                        <strong>Localisation :</strong> <span class="muted">Paris, France</span>
+                    </div>
+                    <div class="pill">
+                        <strong>Objectif :</strong> Administrateur systèmes et réseaux polyvalent
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span id="year">2026</span> © Angel Cherino — BTS SISR
+    </footer>
+</div>
 </body>
 </html>
