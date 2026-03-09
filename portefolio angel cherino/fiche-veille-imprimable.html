@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche de Veille - BTS SIO E5 | Angel Cherino</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 15mm;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #1a1a2e;
+    }
+    @media print {
+      body { padding: 10mm; }
+      .no-print { display: none !important; }
+    }
+    h1 {
+      font-size: 18px;
+      margin: 0 0 4px;
+      border-bottom: 2px solid #3578ff;
+      padding-bottom: 6px;
+    }
+    .meta { font-size: 11px; color: #666; margin-bottom: 16px; }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #3578ff;
+      margin-bottom: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    th { background: #f0f4f8; font-weight: 600; }
+    .fiche-article {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 14px;
+    }
+    .fiche-article h3 { font-size: 13px; margin: 0 0 6px; }
+    .fiche-article-meta { font-size: 10px; color: #888; margin-bottom: 8px; }
+    .fiche-article-resume { margin-bottom: 8px; }
+    .fiche-article-analyse {
+      background: #f8fafc;
+      border-left: 4px solid #3578ff;
+      padding: 8px 10px;
+      font-style: italic;
+    }
+    .btn-print {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #3578ff;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      margin-bottom: 20px;
+    }
+    .btn-print:hover { background: #2563eb; }
+  </style>
+</head>
+<body>
+  <button class="btn-print no-print" onclick="window.print()">Imprimer cette fiche</button>
+
+  <h1>Fiche de Veille Technologique</h1>
+  <div class="meta">Angel Cherino — BTS SIO option SISR — Thématique : L'IA au service de la Cybersécurité</div>
+
+  <div class="section">
+    <div class="section-title">1. Thématique et objectif</div>
+    <p><strong>Sujet :</strong> L'évolution des IDS/IPS grâce au Machine Learning contre les menaces polymorphes.</p>
+    <p><strong>Objectif :</strong> Comprendre comment l'IA automatise l'analyse des logs pour permettre à l'admin de se concentrer sur la remédiation.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">2. Méthodologie en 3 étapes</div>
+    <table>
+      <tr>
+        <th style="width:25%">Étape</th>
+        <th style="width:35%">Outil</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><strong>Capturer</strong></td>
+        <td>Feedly</td>
+        <td>Agrégation des flux RSS : ANSSI, MagIT, BleepingComputer</td>
+      </tr>
+      <tr>
+        <td><strong>Filtrer</strong></td>
+        <td>Google Alerts</td>
+        <td>Mots-clés : "Zero Trust", "CVE Windows Server", "IA Cyber"</td>
+      </tr>
+      <tr>
+        <td><strong>Synthétiser</strong></td>
+        <td>Notion</td>
+        <td>Tableau pour analyse, priorisation et archivage des articles</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">3. Sources de référence</div>
+    <table>
+      <tr>
+        <th>Catégorie</th>
+        <th>Source</th>
+        <th>Type</th>
+      </tr>
+      <tr><td>Institutionnel</td><td>ANSSI</td><td>Site officiel</td></tr>
+      <tr><td>Technique</td><td>Le Monde Informatique</td><td>Média</td></tr>
+      <tr><td>Technique</td><td>ZDNet</td><td>Média</td></tr>
+      <tr><td>Technique</td><td>BleepingComputer</td><td>Média</td></tr>
+      <tr><td>Communauté</td><td>NoLimitSecu</td><td>Podcast</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">4. Exemple de fiche d'article</div>
+    <div class="fiche-article">
+      <h3>L'impact des LLM sur le Phishing en 2026</h3>
+      <div class="fiche-article-meta">Source : [ à compléter ] | Date : Janvier 2026 | Tags : #IA #Sécurité</div>
+      <div class="fiche-article-resume"><strong>Résumé :</strong> Les LLM permettent des campagnes de phishing ultra-personnalisées et quasi sans fautes, augmentant les taux d'ouverture et de clic.</div>
+      <div class="fiche-article-analyse"><strong>Analyse / Impact pour l'entreprise :</strong> Nécessité de renforcer la MFA et la formation utilisateurs aux nouveaux signaux de phishing.</div>
+    </div>
+    <p style="font-size:11px; color:#666;"><em>Répéter ce format pour chaque article marquant. À remplir manuellement ou préparer avant l'examen.</em></p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">5. Structure type à compléter (pour le jour J)</div>
+    <table>
+      <tr><th>Titre article</th><th>Source</th><th>Date</th><th>Points clés</th><th>Impact entreprise</th></tr>
+      <tr><td>_______________</td><td>_______________</td><td>_______________</td><td>_______________</td><td>_______________</td></tr>
+      <tr><td>_______________</td><td>_______________</td><td>_______________</td><td>_______________</td><td>_______________</td></tr>
+      <tr><td>_______________</td><td>_______________</td><td>_______________</td><td>_______________</td><td>_______________</td></tr>
+    </table>
+  </div>
+</body>
+</html>
